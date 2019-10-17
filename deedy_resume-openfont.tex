@@ -1,0 +1,255 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+ 
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{}{Arpan Majumdar}{ \urlstyle{same}
+Email: \href{mailto:arpan.majumdar.dev@gmail.com }{arpan.majumdar.dev@gmail.com } |     Mobile: +917974287080 \\ 
+LinkedIn: \href{https://www.linkedin.com/in/arpan-majumdar-dev}{https://www.linkedin.com/in/arpan-majumdar-dev} \\
+Github: \href{https://github.com/ArpanMajumdar}{https://github.com/ArpanMajumdar}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILL SET
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skill set} 
+\subsection{Languages}
+\textbf{Proficient:} Java, Python \\
+\textbf{Familiar:} Scala, Kotlin
+\sectionsep
+
+\subsection{Frameworks}
+• Springboot and related libraries (Spring batch, Spring state machine, Spring kafka, Spring Security) \\
+• Micronaut
+\sectionsep
+
+\subsection{Technologies}
+• Apache Spark (Big Data) \\
+• Docker (Containerization) \\
+• Drone (CI/CD) \\
+• Kafka (Message broker) \\
+• Redis (Caching)
+\sectionsep
+
+\subsection{Testing}
+• JUnit4/5 \\
+• Mockito \\
+• Powermockito
+\sectionsep
+
+\subsection{Databases}
+• Postgres \\
+• Mongo \\
+• Druid
+\sectionsep
+
+\subsection{Other skills}
+• Image processing \\
+• Machine learning \\
+• Web development
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Education}
+\subsection{Undergraduate}
+\descript{NIT WARANGAL | AUG 2013 – JUNE 2017}
+\location{B.TECH IN ELECTRICAL AND ELECTRONICS ENGINEERING} 
+CGPA on a scale of 10 : \textbf{8.61}
+\sectionsep
+
+\subsection{Higher Secondary CBSE}
+\descript{SRI CHAITANYA TECHNO SCHOOL, VISHAKHAPATNAM, ANDHRA PRADESH | JUNE 2012 – MAY 2013}
+Percentage: \textbf{95}
+\sectionsep
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Work Experience}
+\runsubsection{TARGET CORPORATION}
+\descript{| Software Engineer }
+\location{ JULY 2017 - PRESENT | Bengaluru}
+Nearly 2.5 years of work experience in Retail Industry in the Merchandising and Search Teams in Target Corporation.
+\sectionsep
+
+\section{Work Projects}
+\runsubsection{TARGET VENDOR INCOME}
+\location{| JULY 2017 - JUNE 2019}
+\vspace{\topsep}
+\begin{tightemize}
+\item Worked as a back-end developer for web app which helps Target collect Vendor Income by making contracts and deals with the contract negotiation process.
+\item The application uses a \textbf{React UI}, \textbf{SpringBoot backend} and \textbf{Postgres database}.
+\item It also feeds upstream and downstream consumers using \textbf{Kafka} messaging service.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{SEARCH RELEVANCY ANALYTICS TEAM}
+\location{| JULY 2019 - PRESENT}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Worked in the search analytics team to gain insights from Target Search data and calculate metrics like \textbf{Click Through Rate (CTR)}, \textbf{Relevancy}, \textbf{Profitability}, \textbf{Null Rate} etc. Results of the analytics are used by various teams to improve their products and to catch anomalies.
+\item Designed \textbf{scalable data pipelines} for ingesting and progessing data with throughput of \textbf{3000 TPS(avg)/15000 TPS (peak)}.
+\item Used \textbf{Apache Spark} and \textbf{Kafka streams} for data analysis and \textbf{druid database} for storing and power dashboards from calculated metrics.
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PERSONAL PROJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Personal Projects}
+
+\runsubsection{MELT FRACTION CALCULATION OF PCM USING IMAGE PROCESSING}
+\location{| Feb 2017 – June 2018}
+\begin{tightemize}
+\item This was a research project aimed to \textbf{calculate melt fraction of a phase change material (PCM) using image processing} which was otherwise needed to be calculated using SolidWorks. This reduced the calculation time from \textbf{10-15 min/image} to less than \textbf{1sec/image}, thus improving the speed of research.
+\item Images of melting PCM were taken at regular intervals. \textbf{Image segmentation} and \textbf{3-D rotation} were performed to extract solid and liquid regions.
+\item A \textbf{genetic algorithm} was used for circle fitting and \textbf{K-Means} for image segmentation.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{COMPUTATIONAL INTELLIGENCE LAB, AEROSPACE DEPARTMENT, INDIAN INSTITUTE OF SCIENCE, BANGALORE UNDER PROF. S. N. OMKAR }
+\location{| MAY 2016 - JULY 2016}
+\begin{tightemize}
+\item Aim of the project is to \textbf{perform mineral mapping of lunar hyperspectral data} obtained from \textbf{Moon Mineralogy Mapper(M3)} onboard \textbf{Chandrayaan-I}.
+\item \textbf{Fuzzy K-means} and \textbf{Expectation Maximization} clustering algorithms are used to cluster similar spectra and \textbf{Support Vector Machine(SVM)} was used for classification and comparison with lunar library spectra.
+\end{tightemize}
+\sectionsep
+
+\end{minipage}
+
+\begin{minipage}[t]{0.33\textwidth} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     MOOCs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{MOOCs}
+\descript{Machine Learning}
+\location{by Andrew Ng}
+\sectionsep
+\descript{DeepLearning.ai specialization}
+\location{by Andrew Ng}
+\sectionsep
+\descript{PYTHON FOR DATA SCIENCE}
+\location{ by University of Washington}
+\sectionsep
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+\runsubsection{FLOORPLAN TO JSON PROJECT UNDER AAPKA PAINTER STARTUP  }
+\location{| JAN 2016 - MAR 2016}
+\begin{tightemize}
+\item Aim of the project is to \textbf{convert floor plan given in image format to description of walls and their arrangement in JSON format} so that the JSON file can be used as input for \textbf{Aapka Painter 3d rendering software}.
+\item \textbf{Hough transform} for line detection and \textbf{Harris Corner Detection} algorithms are used to identify walls and corners respectively in the floor plan.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{GAME AUTOMATION - ONE TOUCH DRAW   }
+\location{| JAN 2016}
+\begin{tightemize}
+\item This project aims at \textbf{hacking the Android Game ”One Touch Draw”}. The Connection to PC is either wireless or using USB and game is played on its own with ADB tools.
+\item One touch draw is a simple \textbf{Eular’s path} graph problem in which player has to traverse the figure without lifting his/her finger.
+\end{tightemize}
+\sectionsep
+
+\section{Achievements} 
+\vspace{\topsep}
+\begin{tightemize}
+\item Paper titled \textbf{\href{https://onlinelibrary.wiley.com/doi/10.1002/er.4668}{"An image processing algorithm to estimate the melt fraction and energy storage of a PCM enclosed in a spherical capsule"}} is published in \textbf{International Journal of Energy Research. \href{https://onlinelibrary.wiley.com/doi/10.1002/er.4668}{DOI: 10.1002/er.4668}}
+\item Paper titled \textbf{”A spectral-spatial method for mineral mapping of M3 data using multiple classification approach”} is under review.
+\item Paper titled \textbf{\href{https://www.researchgate.net/publication/310812213_Drawbot_A_Mobile_Robot_for_Image_Scanning_and_Scaled_Printing}{Drawbot: A Mobile Robot for Image Scanning and Scaled Printing}} published by \textbf{International Journal of Mechanical Engineering and Robotics Research.. 5. 10.18178/ijmerr.5.2.124-128.}
+\item Received merit scholarship in 1st year.
+\end{tightemize}
+\sectionsep
+\end{minipage}
+
+\end{document}  \documentclass[]{article}
